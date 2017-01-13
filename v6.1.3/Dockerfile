@@ -24,12 +24,9 @@ RUN curl -o /home/sencha/cmd.sh.zip http://cdn.sencha.com/cmd/6.1.3/no-jre/Sench
 
 ENV PATH /home/sencha/bin/Sencha/Cmd/6.1.3.42/:$PATH
 
-VOLUME /project
-WORKDIR /project
-
 EXPOSE 1841
 
-COPY entrypoint.sh /
+VOLUME ["/var/www", "/opt/projects"]
+WORKDIR /var/www
 
-ENTRYPOINT ["/entrypoint.sh"]
-CMD ["help"]
+CMD ["bash"]
