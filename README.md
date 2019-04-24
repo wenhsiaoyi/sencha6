@@ -11,6 +11,6 @@ $ git tag
 
 
 $ git push origin v6.5.0
-$ git push origin —tags
+$ git push origin --tags
 
 
