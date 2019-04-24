@@ -16,13 +16,13 @@ USER sencha
 ENV HOME /home/sencha
 ENV _JAVA_OPTIONS -Xms1024m -Xmx2048m
 
-RUN curl -o /home/sencha/cmd.sh.zip http://cdn.sencha.com/cmd/6.5.2/no-jre/SenchaCmd-6.5.2-linux-amd64.sh.zip && \
+RUN curl -o /home/sencha/cmd.sh.zip http://cdn.sencha.com/cmd/6.7.0.63/no-jre/SenchaCmd-6.7.0.63-linux-amd64.sh.zip && \
     unzip -p /home/sencha/cmd.sh.zip > /home/sencha/cmd-install.sh && \
     chmod +x /home/sencha/cmd-install.sh && \
     /home/sencha/cmd-install.sh -q && \
     rm /home/sencha/cmd*
 
-ENV PATH /home/sencha/bin/Sencha/Cmd/6.5.2.15/:$PATH
+ENV PATH /home/sencha/bin/Sencha/Cmd/6.7.0.63/:$PATH
 
 EXPOSE 1841
 
