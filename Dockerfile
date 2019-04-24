@@ -26,6 +26,7 @@ ENV PATH /home/sencha/bin/Sencha/Cmd/6.7.0.63/:$PATH
 
 EXPOSE 1841
 
+
 VOLUME ["/var/www", "/opt/projects"]
 WORKDIR /var/www
 
