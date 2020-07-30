@@ -14,7 +14,7 @@ RUN useradd -m sencha && \
 
 USER sencha
 ENV HOME /home/sencha
-ENV _JAVA_OPTIONS -Xms1024m -Xmx2048m
+ENV _JAVA_OPTIONS -Xms64m -Xmx4G
 
 RUN curl -o /home/sencha/cmd.sh.zip http://cdn.sencha.com/cmd/6.7.0.63/no-jre/SenchaCmd-6.7.0.63-linux-amd64.sh.zip && \
     unzip -p /home/sencha/cmd.sh.zip > /home/sencha/cmd-install.sh && \
