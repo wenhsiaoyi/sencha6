@@ -47,7 +47,7 @@ git clean -fX
 
 
 ###加入該次commit的檢查碼
-$ git tag -a bionic 9fceb02
+$ git tag -a v6.5.3.6 0b8805023f9
 
 $ git tag
 
