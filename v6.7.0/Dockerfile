@@ -1,4 +1,4 @@
-FROM wenhsiaoyi/ubuntu-base:jre8
+FROM wenhsiaoyi/ubuntu-base:node12
 MAINTAINER Jack Wen <http://github.com/wenhsiaoyi>
 
 RUN apt-get update && \
@@ -18,8 +18,10 @@ ENV _JAVA_OPTIONS -Xms64m -Xmx4G
 
 RUN curl -o /home/sencha/cmd.sh.zip http://cdn.sencha.com/cmd/6.7.0.63/no-jre/SenchaCmd-6.7.0.63-linux-amd64.sh.zip && \
     unzip -p /home/sencha/cmd.sh.zip > /home/sencha/cmd-install.sh && \
-    chmod +x /home/sencha/cmd-install.sh && \
-    /home/sencha/cmd-install.sh -q && \
+    chmod +x /home/sencha/cmd-install.sh
+
+WORKDIR /home/sencha
+RUN /home/sencha/cmd-install.sh -q && \
     rm /home/sencha/cmd*
 
 ENV PATH /home/sencha/bin/Sencha/Cmd/6.7.0.63/:$PATH
