@@ -8,6 +8,8 @@ docker push wenhsiaoyi/sencha6:6.7.0
 
 
 
+alias sencha67='docker run --env JAVA_OPTS="-Xms64M -Xmx4G" -it  -p 1841:1841 -p 1842:1842 --rm -v $PWD:`pwd` -w `pwd` --name sencha670 wenhsiaoyi/sencha6:6.7.0 sencha'
+
 
 第一次
 docker run --env JAVA_OPTS="-Xms64M -Xmx4G" -it  -p 1841:1841 -p 1842:1842 --rm -v $PWD:`pwd` -w `pwd` --name sencha670 wenhsiaoyi/sencha6:6.7.0 sencha
